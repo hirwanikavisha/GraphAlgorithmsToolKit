@@ -1,107 +1,47 @@
-Graph Algorithms Toolkit
+# 📊 Graph Algorithms Toolkit (Java)
 
-A Java-based interactive toolkit to demonstrate common graph algorithms using a reusable graph library. This project is designed for learning, experimentation, and demonstration of graph algorithms such as BFS, DFS, cycle detection, bipartite check, and topological sort.
+A **Java-based Graph Algorithms Toolkit** for learning, practicing, and demonstrating fundamental graph algorithms.  
+This project is designed to be **modular, reusable, and easy to understand**, with a **menu-driven demo program** to interactively test algorithms.
 
-Features
+---
 
-Create Graphs
+## 💡 Project Overview
 
-Support for directed and undirected graphs
+Graphs are a core topic in Data Structures & Algorithms.  
+This toolkit provides:
 
-Custom number of vertices
+- A **Graph data structure** using adjacency lists  
+- Implementations of **core graph algorithms**  
+- A **menu-driven demo program** to test BFS, DFS, cycle detection, bipartite check, and topological sort  
+- A learning-friendly structure for understanding algorithm behavior  
 
-Add Edges
+---
 
-Interactive input of edges
+## ✨ Features
 
-Validation for vertex indices
+- **Graph Representation**: Adjacency List  
+- **Graph Types**: Directed and Undirected  
+- **Traversals**: BFS and DFS  
+- **Cycle Detection**:  
+  - Directed graphs (DFS with recursion stack)  
+  - Undirected graphs (DFS with parent tracking)  
+- **Bipartite Graph Checking** using BFS coloring  
+- **Topological Sorting** (Kahn’s Algorithm) for DAGs  
+- **Interactive Menu** for creating graphs and running algorithms  
 
-Traversals
+---
 
-BFS (Breadth-First Search)
+## 🗂 Project Structure
 
-DFS (Depth-First Search)
-
-Cycle Detection
-
-Detect cycles in directed or undirected graphs
-
-Bipartite Check
-
-Determine if the graph is bipartite
-
-Inform about odd-length cycles if not bipartite
-
-Topological Sort
-
-Works for Directed Acyclic Graphs (DAGs)
-
-Prints a valid task ordering
-
-Getting Started
-Prerequisites
-
-Java JDK 8+
-
-IDE or terminal for compilation
-
-Running the Project
-
-Compile all classes:
-
-javac -d bin src/**/*.java
-
-
-Run the main program:
-
-java -cp bin Main
-
-
-Follow the interactive menu:
-
-Create a new graph
-
-Add edges
-
-Run BFS or DFS
-
-Check cycles or bipartite status
-
-Perform topological sort (for DAGs)
-
-Project Structure
-/src
- ├─ Main.java          // Interactive menu and toolkit demo
- ├─ graph
- │    └─ GRAPH.java    // Graph class (vertices, edges, adjacency list)
- ├─ traversal
- │    ├─ BFS.java
- │    └─ DFS.java
- └─ algorithms
-      ├─ CYCLEDETECTION.java
-      ├─ BIPARTITE.java
-      └─ TOPOLOGICALSORT.java
-
-Usage Example
-
-Create a directed graph with 5 vertices.
-
-Add edges: 0→1, 0→2, 1→3, 3→4
-
-Run BFS starting from 0 → Output: 0 1 2 3 4
-
-Check cycle detection → Output: Graph is acyclic
-
-Run topological sort → Output: 0 → 2 → 1 → 3 → 4
-
-Notes
-
-Bipartite checks are typically for undirected graphs, but this tool allows checking directed graphs by ignoring edge directions.
-
-Topological sort is only valid for DAGs. If the graph contains a cycle, the toolkit will inform you.
-
-Designed for educational purposes and to demonstrate reusable graph algorithms in Java.
-
-Author
-
-Kavisha Hirwani – Learning and exploring graph algorithms in Java.
+``` GraphAlgorithmsToolKit/
+├── graph/
+│ └── GRAPH.java # Graph data structure
+├── traversal/
+│ ├── BFS.java # Breadth First Search
+│ └── DFS.java # Depth First Search
+├── algorithms/
+│ ├── CYCLEDETECTION.java # Cycle detection
+│ ├── BIPARTITE.java # Bipartite check
+│ └── TOPOLOGICALSORT.java # Topological sort
+├── Main.java # Menu-driven demo program
+└── README.md # Project description
